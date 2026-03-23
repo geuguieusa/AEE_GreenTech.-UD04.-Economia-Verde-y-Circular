@@ -1,121 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salvemos el Planeta - GreenTech</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      :root {
-        --primary-green: #28a745;
-        --dark-green: #1e7e34;
-        --bg-light: #f4fdf4;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Montserrat", sans-serif;
-        background-color: var(--bg-light);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      .hero {
-        position: relative;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 2rem;
-        color: white;
-        overflow: hidden;
-      }
-      .hero-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        filter: brightness(0.6);
-      }
-      .hero-content {
-        z-index: 1;
-      }
-      h1 {
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
-        font-weight: 700;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-      }
-      p {
-        font-size: clamp(1.2rem, 3vw, 1.5rem);
-        margin-bottom: 2rem;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-      }
-      .btn-eco {
-        background-color: var(--primary-green);
-        color: white;
-        border: 2px solid var(--dark-green);
-        padding: 1rem 2.5rem;
-        font-size: 1.25rem;
-        font-family: inherit;
-        font-weight: 700;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-      }
-      .btn-eco:hover {
-        background-color: var(--dark-green);
-        transform: translateY(-2px);
-      }
-      footer {
-        background-color: #222;
-        color: white;
-        text-align: center;
-        padding: 1.5rem;
-        font-size: 0.9rem;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="hero">
-      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop" alt="Paisaje natural" class="hero-bg" loading="lazy" decoding="async">
-      <div class="hero-content">
-        <h1>Salvemos el Planeta</h1>
-        <p>Únete a la revolución verde de GreenTech.</p>
-        <button class="btn-eco">
-          <i class="fa-solid fa-leaf"></i> Quiero ayudar
-        </button>
-      </div>
-    </main>
-    <footer id="footer"></footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const footer = document.getElementById('footer');
-        const anio = new Date().getFullYear();
-        footer.innerHTML = `GreenTech Solutions &copy; ${anio} - Web sostenible de impacto cero`;
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvemos el Planeta - GreenTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-green: #28a745;
+      --dark-green: #1e7e34;
+      --bg-light: #f4fdf4;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: var(--bg-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .hero {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+    .hero-content {
+      z-index: 1;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    p {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+    .btn-eco {
+      background-color: var(--primary-green);
+      color: white;
+      border: 2px solid var(--dark-green);
+      padding: 1rem 2.5rem;
+      font-size: 1.25rem;
+      font-family: inherit;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+    }
+    .btn-eco:hover {
+      background-color: var(--dark-green);
+      transform: translateY(-2px);
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop" alt="Paisaje natural" class="hero-bg" loading="lazy" decoding="async">
+    <div class="hero-content">
+      <h1>Salvemos el Planeta</h1>
+      <p>Únete a la revolución verde de GreenTech.</p>
+      <button class="btn-eco">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Quiero ayudar
+      </button>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const footer = document.getElementById('footer');
+      const anio = new Date().getFullYear();
+      footer.innerHTML = `GreenTech Solutions &copy; ${anio} - Web sostenible de impacto cero`;
+    });
+  </script>
+</body>
 </html>
