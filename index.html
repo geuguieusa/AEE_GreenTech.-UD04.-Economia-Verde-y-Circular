@@ -44,9 +44,16 @@
         padding: 2rem;
         color: white;
         overflow: hidden;
-        background-image: url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=3000&auto=format&fit=crop");
-        background-size: cover;
-        background-position: center;
+      }
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.6);
       }
       .hero-content {
         z-index: 1;
@@ -93,6 +100,7 @@
   </head>
   <body>
     <main class="hero">
+      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop" alt="Paisaje natural" class="hero-bg" loading="lazy" decoding="async">
       <div class="hero-content">
         <h1>Salvemos el Planeta</h1>
         <p>Únete a la revolución verde de GreenTech.</p>
